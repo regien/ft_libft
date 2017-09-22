@@ -6,11 +6,11 @@
 /*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 13:33:59 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/07/05 16:14:01 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/09/19 20:17:07 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+size_t		ft_strlen(char *str)
 {
 	int i;
 
