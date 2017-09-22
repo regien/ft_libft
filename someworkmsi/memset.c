@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/22 02:56:21 by regien           ###   ########.fr       */
+/*   Updated: 2017/09/22 07:02:22 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,59 @@
 void	ft_putchar(int b)
 {
 	write(1, &b, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int d;
+	d = 0;
+	while (str[d])
+	{
+		ft_putchar(str[d]);
+		d++;
+	}
+}
+
+size_t	ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+	while ((dest[i] = src[i]) != '\0')
+	{
+		i++;
+	}
+	return dest;
+}
+
+char	*ft_strncpy(char *dest, char *src, size_t len)
+{
+	size_t i;
+	int b;
+	
+	i = 0;
+	b = 0;
+	while ((dest[i] = src[b]) != '\0' && i < len)
+	{
+		i++;
+		b++;
+	}
+	while ((ft_strlen(src) <= ft_strlen(dest)) && i < len)
+	{
+		dest[i] = src[b];
+		i++;
+	}
+	return (dest);
 }
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -56,9 +109,36 @@ void	*memcpy(void *dest, const void *src, size_t n)
 }
 */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
+	unsigned char	*temp;
+	unsigned char	*sauce;
+	unsigned char	*poly;
+	size_t	 i;
+
+	poly = dest;
+	sauce = (unsigned char *)src;
+	i = 0;
+	temp = malloc(sizeof(char) * len + 1);
 	
+	while(len > i)
+	{
+		(*temp++) = (*sauce++);
+		i++;
+	}
+	printf("tu pendejada: %s\n", temp);
+	return(temp);
+
+
+
+
+
+/*
+	ft_strncpy(temp, sauce, len);
+	strcpy(poly, temp);
+	free(temp);
+	return(poly);
+*/
 }
 
 int main(void)
@@ -92,6 +172,13 @@ int main(void)
 		o++;
 	}
 	printf("\n");
-
-
+	
+	char toth[32] = "012345678901234567890123456789\n";
+	memmove(toth+5, toth+30, 10);
+	printf("%s", toth);
+	ft_strcpy(toth, "012345678901234567890123456789\n");
+	printf("%s", toth);
+	ft_memmove(toth+5, toth+10, 10);
+	printf("%s", toth);
+	printf("\n");
 }
