@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/22 07:02:22 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/09/22 17:37:18 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,23 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
+void	*ft_memalloc(size_t size)
+{
+	char	*orfeus;
+
+	orfeus = malloc((sizeof(char) * size) + 1);
+	ft_bzero(orfeus, ft_strlen(orfeus));
+	return(orfeus);
+}
+
+void	*ft_memdel(void **ap)
+{
+	unsigned char	*container;
+	
+	container = *ap;
+	free(container);
+	return (0);
+}
 /*
 void	*memcpy(void *dest, const void *src, size_t n)
 {
@@ -109,6 +126,9 @@ void	*memcpy(void *dest, const void *src, size_t n)
 }
 */
 
+
+
+/*
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	unsigned char	*temp;
@@ -129,7 +149,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	printf("tu pendejada: %s\n", temp);
 	return(temp);
 
-
+*/
 
 
 
@@ -138,11 +158,13 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	strcpy(poly, temp);
 	free(temp);
 	return(poly);
-*/
 }
+*/
 
 int main(void)
 {
+// MEMSET
+	printf("\n\nMEMSETTEST\n\n");
 	int d = 0;
 	int e = 0;
 	int o = 0;
@@ -162,6 +184,10 @@ int main(void)
 		printf("%i\n", h[e]);
 		e++;
 	}
+	
+// BZERO
+	printf("\n\nBZEROTEST\n\n");
+
 	char k[20] = "imprimeme";
 	printf("llego> %s\n", k);
 	ft_bzero(k, sizeof(char) * 2);
@@ -172,13 +198,34 @@ int main(void)
 		o++;
 	}
 	printf("\n");
-	
+// MEMMOVE
+	printf("\n\nMEMMOVETEST\n\n");
+
 	char toth[32] = "012345678901234567890123456789\n";
 	memmove(toth+5, toth+30, 10);
 	printf("%s", toth);
 	ft_strcpy(toth, "012345678901234567890123456789\n");
 	printf("%s", toth);
-	ft_memmove(toth+5, toth+10, 10);
+//	ft_memmove(toth+5, toth+10, 10);
 	printf("%s", toth);
+// MEMALLOC
+	printf("\n\nMEMALLOCTEST\n\n");
+	char*	nisu;
+	nisu = ft_memalloc(6);
+	printf("nisu = %s\n", nisu);
+	nisu = "012345";
+	printf("nisu = %s\n", nisu);
+
+// MEMDEL
+	printf("\n\nMEMDELTEST\n\n");
+
+	char imprimeme[6] = "012345";
+	printf("imprimeme = %s\n", imprimeme);
+	ft_memdel(char *imprimeme);
+	printf("imprimeme = %s\n", imprimeme);
+
+
+
+
 	printf("\n");
 }
