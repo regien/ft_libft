@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/24 03:23:02 by regien           ###   ########.fr       */
+/*   Updated: 2017/09/24 03:40:56 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -305,7 +305,7 @@ int main(void)
 	printf("mytest = \t%s\n", fed);
 	//insert another own mmcpy
 	strcpy(fed ,"01234567890123456789012345678");
-	ft_memcpy(fed+1, fed+5, 10);
+	ft_memcpy(fed+6, fed+4, 10);
 	printf("mytest2 = \t%s\n", fed);
 	strcpy(fed ,"01234567890123456789012345678");
 	printf("realfed = \t%s\n", fed);
