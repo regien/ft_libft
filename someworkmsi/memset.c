@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/22 17:37:18 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/09/22 20:57:57 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,11 +113,22 @@ void	*ft_memalloc(size_t size)
 
 void	*ft_memdel(void **ap)
 {
-	unsigned char	*container;
-	
-	container = *ap;
-	free(container);
+	if (*ap || ap)
+		return (0);
+	free(*ap);
+	*ap = NULL;
 	return (0);
+}
+
+char	*ft_strnew(size_t size)
+{
+	char	*ending;
+
+	if ((size_t *)size < 0)
+		return(NULL);
+	ending = malloc((sizeof(unsigned char) * size) + 1);
+	ft_bzero(ending, size);
+	return(ending);
 }
 /*
 void	*memcpy(void *dest, const void *src, size_t n)
@@ -219,11 +230,18 @@ int main(void)
 // MEMDEL
 	printf("\n\nMEMDELTEST\n\n");
 
-	char imprimeme[6] = "012345";
+	char *imprimeme;
+	imprimeme = malloc((sizeof(char) * 6) + 1);
+	imprimeme = "012345";
 	printf("imprimeme = %s\n", imprimeme);
-	ft_memdel(char *imprimeme);
-	printf("imprimeme = %s\n", imprimeme);
+//	ft_memdel(*imprimeme);
+	printf("imprimeme = %s\nfailed try\n", imprimeme);
 
+// STRNEW
+	printf("\n\nSTRNEWTEST\n\n");
+
+	ft_putstr(ft_strnew(5));
+//	printf("imprimeme = %s\n", );
 
 
 
