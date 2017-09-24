@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/22 20:57:57 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/09/24 03:23:02 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,18 +124,60 @@ char	*ft_strnew(size_t size)
 {
 	char	*ending;
 
-	if ((size_t *)size < 0)
-		return(NULL);
+//	if ((size_t *)size < 0)
+//		return(NULL);
 	ending = malloc((sizeof(unsigned char) * size) + 1);
 	ft_bzero(ending, size);
 	return(ending);
 }
-/*
-void	*memcpy(void *dest, const void *src, size_t n)
+
+void	*jaleman_memcpy(void *dst, const void *src, size_t n)
 {
-	
+	size_t			i;
+	unsigned char	*udst;
+	unsigned char	*usrc;
+
+	i = 0;
+	udst = (unsigned char *)dst;
+	usrc = (unsigned char *)src;
+	while (i < n)
+	{
+		udst[i] = usrc[i];
+		i += 1;
+	}
+	return (dst);
 }
-*/
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*rushb;
+	unsigned char	*sauce;
+	size_t			b;
+
+	sauce = (unsigned char *)src;
+	rushb = (unsigned char *)dest;
+	b = 0;
+
+	if (sauce < rushb)
+	{
+		while(n > 0)
+		{
+			rushb[n] = sauce[n];
+			n--;
+		}
+		ft_putstr("if\n");
+	}
+	else
+	{
+		while(b < n)
+		{
+			rushb[b] = sauce[b];
+			b++;
+		}
+		ft_putstr("else\n");
+	}
+	return (dest);
+}
 
 
 
@@ -244,6 +286,29 @@ int main(void)
 //	printf("imprimeme = %s\n", );
 
 
+// MEMCPY
+//	this function doesnt care about overlapping (CHECK THE MAN)
+//	is this function is used and overlap use memmove lol
+	printf("\n\nMEMCPYTEST\n\n");
+	char fed[30] = "01234567890123456789012345678";
+//	fed = malloc(sizeof(char) * 40);
+	ft_putstr("pendejadas dest + 5, sauce +1\n");
+	memcpy(fed+5, fed+1, 10);
+	printf("fed = \t\t%s\n", fed);
+	//jaleman
+	strcpy(fed ,"01234567890123456789012345678");
+	jaleman_memcpy(fed+5, fed+1, 10);
+	printf("jaleman = \t%s\n", fed);
+	//insert own mmcpy
+	strcpy(fed ,"01234567890123456789012345678");
+	ft_memcpy(fed+5, fed+1, 10);
+	printf("mytest = \t%s\n", fed);
+	//insert another own mmcpy
+	strcpy(fed ,"01234567890123456789012345678");
+	ft_memcpy(fed+1, fed+5, 10);
+	printf("mytest2 = \t%s\n", fed);
+	strcpy(fed ,"01234567890123456789012345678");
+	printf("realfed = \t%s\n", fed);
 
 	printf("\n");
 }
