@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/24 03:40:56 by regien           ###   ########.fr       */
+/*   Updated: 2017/09/24 19:14:09 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,8 @@ char	*ft_strnew(size_t size)
 	return(ending);
 }
 
+
+//OVERLAP MEMORY
 void	*jaleman_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
@@ -148,6 +150,16 @@ void	*jaleman_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+//RVELEZ VERSIONA ITOA
+
+char  ft_itoa(int n)
+{
+	char	*something;
+	
+}
+
+//GERARDO'S VERSION WORK SIMILAR TO MEMMOVE / might be used in memmove
+//Delete comments in the clean version
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*rushb;
@@ -165,7 +177,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 			rushb[n] = sauce[n];
 			n--;
 		}
-		ft_putstr("if\n");
+//		ft_putstr("if\n");
 	}
 	else
 	{
@@ -174,13 +186,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 			rushb[b] = sauce[b];
 			b++;
 		}
-		ft_putstr("else\n");
+//		ft_putstr("else\n");
 	}
 	return (dest);
 }
 
+// TIENES QUE HACER ITOA, el prototipo va a comparar con una unidad del array
 
-
+/*void	ft_memccpy()
+{
+	
+}
+*/
 /*
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -311,4 +328,26 @@ int main(void)
 	printf("realfed = \t%s\n", fed);
 
 	printf("\n");
+
+	
+	// MEMCCPY
+	// in order to continue you must do itoa
+	printf("\n\nMEMCCPYTEST\n\n");
+	char *classy;
+	classy = malloc((sizeof(char) * 30) + 1);
+	ft_strcpy(classy,"012345678901234567890123456789");
+	printf("realclassy =\t\t%s\n", classy);
+
+	//firsttest
+	ft_strcpy(classy,"012345678901234567890123456789");
+	memccpy(classy+8, classy+20, '5', 10);
+	ft_putstr("pendejadas\n");
+	printf("firsttest = \t\t%s\n", classy);
+	//secondtest
+	ft_strcpy(classy,"012345678901234567890123456789");
+	ft_strcpy(classy,"oracion de tres partes, prueba");
+	printf("realsecondtest = \t%s\n", classy);
+	memccpy(classy+10, classy+20, 'p', 20);
+	printf("secondtest = \t\t%s\n", classy);
+
 }
