@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 18:30:02 by regien            #+#    #+#             */
-/*   Updated: 2017/09/24 19:14:09 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/09/25 06:36:14 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int i;
 
@@ -43,7 +43,25 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putnbr(int nb)
+{
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(nb + '0');
+	}
+}
+
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
@@ -150,12 +168,26 @@ void	*jaleman_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-//RVELEZ VERSIONA ITOA
+//ITOA
 
-char  ft_itoa(int n)
+/*
+char  *ft_itoa(int n)
 {
 	char	*something;
 	
+	if ()
+	
+}
+*/
+
+// STRDUP
+char	*ft_strdup(const char *s1)
+{
+	char	*temp;
+	
+	temp = malloc((sizeof(char) * ft_strlen(s1)) +1);
+	ft_strcpy(temp, s1);
+	return(temp);
 }
 
 //GERARDO'S VERSION WORK SIMILAR TO MEMMOVE / might be used in memmove
@@ -349,5 +381,39 @@ int main(void)
 	printf("realsecondtest = \t%s\n", classy);
 	memccpy(classy+10, classy+20, 'p', 20);
 	printf("secondtest = \t\t%s\n", classy);
+
+// ITOA
+/*	printf("\n\nITOATEST\n\n");
+	char	*tesu;
+	int		uri = 45;
+	tesu = malloc(sizeof(char) * 40);
+	strcpy(tesu, "pruebapruebapruebapruebapruebaprueba");
+	printf("%s\n", tesu);
+	ft_putnbr(uri);
+*/
+
+
+// STRDUP
+	printf("\n\nSTRDUPTEST\n\n");
+//test 1
+	char	*teod;
+	teod = malloc(sizeof(char));
+	teod = strdup("test 1 =\tpendejada de funcion\n");
+	ft_putstr(teod);
+//test 2
+	char	*dunt;
+	dunt = malloc(sizeof(char));
+	dunt = strdup("");
+	ft_putstr(dunt);
+//test 3
+	char	*lest;
+	lest = malloc(sizeof(char));
+	lest = ft_strdup("my test =\tpendejada de funcion\n");
+	ft_putstr(lest);
+//test 4
+	char	*diffe;
+	diffe = malloc(sizeof(char));
+	diffe = ft_strdup('\0');
+	ft_putstr(diffe);
 
 }
