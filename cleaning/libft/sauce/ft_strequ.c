@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/05 13:33:34 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/09/29 02:18:52 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/09/29 04:05:26 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/09/29 04:35:13 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+int		ft_strnequ(char const *s1, char const *s2)
 {
-	write(1, &c, 1);
+	if(s1 == s2)
+		return (1);
+	else
+		return (0);
 }

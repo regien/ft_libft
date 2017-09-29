@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/09/27 22:13:18 by regien           ###   ########.fr       */
+/*   Updated: 2017/09/29 04:36:31 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <string.h>
 
-void	ft_putchar(int c);
-void	ft_putstr(char *str);
+void	ft_putchar(char c);
+void	ft_putstr(char const *str);
 size_t	ft_strlen(const char *str);
 int	ft_strcmp(char *s1, char *s2);
 void	ft_swap(int *a, int *b);
@@ -34,5 +34,10 @@ char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, char *src, size_t len);
 char	*ft_strdup(const char *s1);
 char	*ft_strnew(size_t size);
-
+void	ft_putendl(char const *s);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_strclr(char *s)
+int		ft_strnequ(char const *s1, char const *s2)
 #endif

@@ -6,13 +6,13 @@
 /*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 13:33:45 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/09/27 22:11:10 by regien           ###   ########.fr       */
+/*   Updated: 2017/09/29 02:36:32 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *str)
 {
 	int i;
 	i = 0;

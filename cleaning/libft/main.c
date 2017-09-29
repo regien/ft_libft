@@ -129,6 +129,13 @@ int main(void)
 	ft_putnbr(uri);
 */
 
+// PUTENDL
+	printf("\n\nPUTENDL\n\n");
+	ft_putendl("esta pendejada no deberia ser considerada una funcion");
+
+// STREQU
+	printf("\n\nSTREQU\n\n");
+	ft_putnbr(ft_strequ("pendejadas", "pendejadas"));
 
 // STRDUP
 	printf("\n\nSTRDUPTEST\n\n");
@@ -150,7 +157,9 @@ int main(void)
 //test 4
 	char	*diffe;
 	diffe = malloc(sizeof(char));
-	diffe = ft_strdup('\0');
-	ft_putstr(diffe);
+//	diffe = ft_strdup('\0');
+//	ft_putstr(diffe);
+
+
 
 }
