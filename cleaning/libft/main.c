@@ -160,6 +160,7 @@ int main(void)
 //	diffe = ft_strdup('\0');
 //	ft_putstr(diffe);
 
+// FILL MEE
 
 
 }
