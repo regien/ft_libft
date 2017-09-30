@@ -19,7 +19,7 @@ void	ft_strclr(char *s)
 	t = 0;
 	while(ft_strlen(s) > t)
 	{
-		str[t] = '\0';
+		s[t] = '\0';
 		t++;
 	}
 }

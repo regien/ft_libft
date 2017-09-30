@@ -136,6 +136,7 @@ int main(void)
 // STREQU
 	printf("\n\nSTREQU\n\n");
 	ft_putnbr(ft_strequ("pendejadas", "pendejadas"));
+	printf("si es 1, verdadero son iguales \n sino cagado");
 
 // STRDUP
 	printf("\n\nSTRDUPTEST\n\n");
@@ -155,8 +156,8 @@ int main(void)
 	lest = ft_strdup("my test =\tpendejada de funcion\n");
 	ft_putstr(lest);
 //test 4
-	char	*diffe;
-	diffe = malloc(sizeof(char));
+//	char	*diffe;
+//	diffe = malloc(sizeof(char));
 //	diffe = ft_strdup('\0');
 //	ft_putstr(diffe);
 
