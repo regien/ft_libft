@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/09/29 04:36:31 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/01 19:55:47 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,20 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_strclr(char *s);
 int	ft_strequ(char const *s1, char const *s2);
 void	ft_putendl_fd(char const *s, int fd);
+
+// extra functions
+// mostly exam functions
+char	*ft_strrevert(char *s1);
+
+
+// linked list part
+// delete me when you done
+typedef struct	s_list
+{
+	void		*content;
+	size_t		content_size;
+	struct	s_list	*next;
+}		s_list;
+// todas las funciones de linked list deben ir debajo
+
 #endif

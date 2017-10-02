@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
+/*   Updated: 2017/10/01 19:24:22 by regien           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int main(void)
@@ -135,8 +147,16 @@ int main(void)
 
 // STREQU
 	printf("\n\nSTREQU\n\n");
+	ft_putstr("my putnbr ~ ft_strequ =");
 	ft_putnbr(ft_strequ("pendejadas", "pendejadas"));
-	printf("si es 1, verdadero son iguales \n sino cagado");
+	ft_putstr("\n");
+//	ft_putstr("my putnbr ~ ft_strnequ =");
+//	ft_putnbr(ft_strnequ("pendejadas", "pedejadas", 4));
+// 	^^^^ UNCOMENT ME WHEN YOU ARE DONE ^^^^^
+
+	ft_putstr("\n");
+
+	printf("si es 1, verdadero son iguales \n sino cagado, excepto en el segundo caso");
 
 // STRDUP
 	printf("\n\nSTRDUPTEST\n\n");
@@ -161,6 +181,13 @@ int main(void)
 //	diffe = ft_strdup('\0');
 //	ft_putstr(diffe);
 
+
+// STRREVERT
+	printf("\n\nSTRREVERT\n\n");
+	ft_putstr("the regular sentence:\tsomething in the sky\n");
+	ft_putstr("my ft_strrevert test:\t");
+	ft_putstr(ft_strrevert("something in the sky"));
+	ft_putstr("\n");
 // FILL MEE
 
 

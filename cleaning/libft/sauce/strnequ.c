@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   strnequ.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
+/*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/29 02:09:39 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/01 16:17:59 by regien           ###   ########.fr       */
+/*   Created: 2017/09/30 15:08:05 by regien            #+#    #+#             */
+/*   Updated: 2017/09/30 18:07:41 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+int ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int i;
 
-	i = 0;
-	while ((dest[i] = src[i]) != '\0')
+	i =0;
+	while(n > 0)
 	{
+		if (s1[i] != s2[i])
+			return (0);
 		i++;
+		n--;
 	}
-	return (dest);
+	return(1);
 }
