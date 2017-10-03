@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/01 19:24:22 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/02 11:47:17 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,15 @@ int main(void)
 // PUTENDL
 	printf("\n\nPUTENDL\n\n");
 	ft_putendl("esta pendejada no deberia ser considerada una funcion");
+
+
+// STRLEN
+	printf("\n\nSTRLEN\n\n");
+	ft_putstr("oracion =\t pendejadas\n");
+	ft_putnbr(ft_strlen("pendejadas"));
+	ft_putstr("\n");
+	ft_putnbr(strlen("pendejadas"));
+	ft_putstr("\n");
 
 // STREQU
 	printf("\n\nSTREQU\n\n");
