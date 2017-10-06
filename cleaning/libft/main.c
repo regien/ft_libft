@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/03 00:32:06 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/05 19:40:33 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ char			**ft_strsplit(const char *str, char c)
 	words[word_count] = 0;
 	return (words);
 }
+
 
 int main(void)
 {
@@ -293,7 +294,22 @@ int main(void)
 	ft_putstr(fenix[2]);
 	ft_putstr("|\n");
 	ft_putstr("^^something is suposse to happen above me.\n");
-	// FILL MEE
 
+
+	// NRBLEN
+	// incompleto ?
+	printf("\n\nNBRLEN TEST\n\n");
+//	ft_putstr("");
+//	ft_putstr(ft_nbrlen());
+
+
+	// ITOA
+	printf("\n\nITOA TEST\n\n");
+	ft_putstr("valor de las pendejadas : -4562\n");
+	ft_putstr("my itoa test :");
+	ft_putstr(ft_itoa(-4562));
+	ft_putstr("\nno tengo contra que testearlo asi que porfavor\n imprime pendejada\n");
+
+	// FILL MEE
 
 }

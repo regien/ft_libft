@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/02 18:50:49 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/05 21:20:13 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *str);
-size_t	ft_strlen(const char *str);
+size_t	ft_strlen(char const*str);
 int	ft_strcmp(char *s1, char *s2);
 void	ft_swap(int *a, int *b);
 void	ft_putnbr(int nbr);
@@ -42,11 +42,13 @@ void	ft_strclr(char *s);
 int	ft_strequ(char const *s1, char const *s2);
 void	ft_putendl_fd(char const *s, int fd);
 char	*ft_strtrim(char const *s);
+int	ft_atoi(char const *str);
+char	*ft_itoa(int n);
 
 // extra functions
 // mostly exam functions
 char	*ft_strrevert(char *s1);
-
+size_t	ft_nbrlen(int nbr, int base);
 
 // linked list part
 // delete me when you done
