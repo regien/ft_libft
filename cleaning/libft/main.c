@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/05 19:40:33 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/06 03:57:17 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -308,7 +308,28 @@ int main(void)
 	ft_putstr("valor de las pendejadas : -4562\n");
 	ft_putstr("my itoa test :");
 	ft_putstr(ft_itoa(-4562));
+	ft_putstr("\n4582 :");
+	ft_putstr(ft_itoa(4582));
+	ft_putstr("\n2147483647 :");
+	ft_putstr(ft_itoa(2147483641));
+	ft_putstr("\n-2147483648");
+	ft_putstr(ft_itoa(-2147483648));
+	ft_putstr("\n-58796:");
+	ft_putstr(ft_itoa(-587496));
 	ft_putstr("\nno tengo contra que testearlo asi que porfavor\n imprime pendejada\n");
+
+
+	// FREE
+	printf("\n\nFREE TEST\n\n");
+	char	*stuff;
+	stuff = malloc(sizeof(char) * 5);
+	ft_strcpy(stuff, "01234");
+	printf("my stuff: %s \n", stuff);
+	free(stuff);
+	stuff = malloc(sizeof(char) * 5);
+	ft_strcpy(stuff, "04321");
+	printf("my stuff: %s \n", stuff);
+
 
 	// FILL MEE
 

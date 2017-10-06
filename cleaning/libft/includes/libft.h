@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/05 21:20:13 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/06 02:55:36 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	ft_putendl_fd(char const *s, int fd);
 char	*ft_strtrim(char const *s);
 int	ft_atoi(char const *str);
 char	*ft_itoa(int n);
+int ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strcat(char *dst,const char *src);
 
 // extra functions
 // mostly exam functions

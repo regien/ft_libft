@@ -6,25 +6,29 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 15:35:00 by regien            #+#    #+#             */
-/*   Updated: 2017/10/05 21:49:51 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/06 02:28:44 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*dothework(int n, int len)
+char	*dtwork(int n, int len, char *pdj, size_t negative)
 {
-	
-}
-
-size_t	nbrneg(int n)
-{
-	if(n < 0)
+	while (len >= 0)
 	{
-		n = -n;
-		return(1);
+		if (len >= 0)
+		{
+			pdj[len] = ((n % 10) + '0');
+			n = (n / 10);
+			len--;
+		}
+		if (negative == 1 && len == 0)
+		{
+			pdj[len] = '-';
+			len--;
+		}
 	}
-	return(0);
+	return(pdj);
 }
 
 char	*ft_itoa(int n)
@@ -34,28 +38,21 @@ char	*ft_itoa(int n)
 	char	*holder;
 
 	len = ft_nbrlen(n, 10);
-	holder = malloc(sizeof(char) * (len + 1));
+	if (!(holder = malloc(sizeof(char) * (len + 1))))
+		return (NULL);
 	holder[len] = '\0';
 	len--;
-	negative = nbrneg(n);
-//	if (n < 0)
-//	{
-//		negative = 1;
-//		n = -n;
-//	}
-	while (len >= 0)
+	negative = 0;
+	if (n == -2147483648)
 	{
-		if (len >= 0)
-		{
-			holder[len] = ((n % 10) + '0');
-			n = (n / 10);
-			len--;
-		}
-		if (negative == 1 && len == 0)
-		{
-			holder[len] = '-';
-			len--;
-		}
+		holder = "-2147483648";
+		return(holder);
 	}
+	if (n < 0)
+	{
+		negative = 1;
+		n = -n;
+	}
+	holder = dtwork(n, len, holder, negative);
 	return (holder);
 }
