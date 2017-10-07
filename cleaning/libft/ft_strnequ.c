@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 11:58:27 by regien            #+#    #+#             */
-/*   Updated: 2017/10/03 11:58:29 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/07 01:46:00 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int i;
 
-	i =0;
+	i = 0;
 	while(n > 0)
 	{
 		if (s1[i] != s2[i])

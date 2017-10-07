@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/06 14:32:48 by regien            #+#    #+#             */
-/*   Updated: 2017/10/07 01:52:10 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/10/07 02:39:27 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/10/07 02:42:04 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_strdel(char **as)
 {
-	return (c >= ' ' && c <= '~');
+	free(*as);
+	*as = NULL;
 }
