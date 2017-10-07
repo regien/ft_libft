@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/30 18:21:25 by regien            #+#    #+#             */
-/*   Updated: 2017/10/06 16:55:13 by regien           ###   ########.fr       */
+/*   Created: 2017/10/06 13:41:21 by regien            #+#    #+#             */
+/*   Updated: 2017/10/06 15:58:36 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*	ft_strsub(char const *s, unsigned int start, size_t len)
+int	ft_isalpha(int c)
 {
-	char	*substr
-	while(s == '\0' || (substr = (char *) malloc(sizeof(char) * len + 1) != '\0')
+	return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

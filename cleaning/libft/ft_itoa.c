@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 15:35:00 by regien            #+#    #+#             */
-/*   Updated: 2017/10/06 02:28:44 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/06 16:58:06 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	negative = 0;
 	if (n == -2147483648)
 	{
-		holder = "-2147483648";
+		ft_strcpy(holder, "-2147483648");
 		return(holder);
 	}
 	if (n < 0)

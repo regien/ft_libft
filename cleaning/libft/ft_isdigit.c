@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/30 18:21:25 by regien            #+#    #+#             */
-/*   Updated: 2017/10/06 16:55:13 by regien           ###   ########.fr       */
+/*   Created: 2017/10/06 13:09:22 by regien            #+#    #+#             */
+/*   Updated: 2017/10/06 13:40:27 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*	ft_strsub(char const *s, unsigned int start, size_t len)
+int	ft_isdigit(int c)
 {
-	char	*substr
-	while(s == '\0' || (substr = (char *) malloc(sizeof(char) * len + 1) != '\0')
+	return (c >= '0' && c <= '9');
 }
