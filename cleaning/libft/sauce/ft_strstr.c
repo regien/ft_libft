@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/07 17:19:09 by regien            #+#    #+#             */
-/*   Updated: 2017/10/07 18:56:24 by regien           ###   ########.fr       */
+/*   Created: 2017/10/08 14:11:23 by regien            #+#    #+#             */
+/*   Updated: 2017/10/08 14:37:11 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	unsigned int	i;
-	unsigned int	len;
-
-	len = ft_strlen(dest);
-	i = 0;
-	while((i < n) && src[i])
-	{
-		dest[len + i] = src[i];
-		i++;
-	}
-	dest[len + i] = '\0';
-	return (dest);
+	while()
 }

@@ -6,11 +6,12 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/06 03:57:17 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/08 15:31:16 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 
 static int		ft_word_countc(const char *str, char c)
 {
@@ -329,6 +330,20 @@ int main(void)
 	stuff = malloc(sizeof(char) * 5);
 	ft_strcpy(stuff, "04321");
 	printf("my stuff: %s \n", stuff);
+
+	// STRLCAT
+	printf("\n\nSTRLCAT TEST\n\n");
+//	dunno why this function is not even in the real library
+//	try to cast this in a mac ^ & install hackintosh
+//	ft_putnbr(strlcat("pendejadas", "pendejadas", 5));
+//	ft_putstr("\n");
+	ft_putnbr(ft_strlcat("pendejadas", "pendejadas", 5));
+	ft_putstr("\n");
+
+	// STRLCAT
+	printf("\n\nSTRSTR TEST\n\n");
+	ft_putstr(strstr("qewadszcxpendejadas.com", "pen"));
+	ft_putstr("\n");
 
 
 	// FILL MEE

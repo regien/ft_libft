@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbrold.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/07 17:19:09 by regien            #+#    #+#             */
-/*   Updated: 2017/10/07 18:56:24 by regien           ###   ########.fr       */
+/*   Created: 2017/10/07 20:52:01 by regien            #+#    #+#             */
+/*   Updated: 2017/10/07 20:52:22 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "linft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+void	ft_putnbr(int nb)
 {
-	unsigned int	i;
-	unsigned int	len;
-
-	len = ft_strlen(dest);
-	i = 0;
-	while((i < n) && src[i])
+	if (nb < 0)
 	{
-		dest[len + i] = src[i];
-		i++;
+		ft_putchar('-');
+		nb = -nb;
 	}
-	dest[len + i] = '\0';
-	return (dest);
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(nb + '0');
+	}
 }
