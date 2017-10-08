@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 02:06:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/09/29 02:06:23 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/07 15:17:47 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,18 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char	*orfeus;
+	unsigned char	*opt;
 
-	orfeus = malloc((sizeof(char) * size) + 1);
-	ft_bzero(orfeus, ft_strlen(orfeus));
-	return(orfeus);
+	opt = NULL;
+	if (size)
+	{
+		if(!(opt=malloc(sizeof(unsigned char) * size)))
+			return (NULL);
+		while (size)
+		{
+			opt[size] = 0;
+			size--;
+		}
+	}
+	return ((void*)opt);
 }

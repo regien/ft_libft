@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/07 02:43:04 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/07 17:19:55 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_strdel(char **as);
+char*	ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strncat(char *dest, const char *src, size_t n);
 
 
 // extra functions

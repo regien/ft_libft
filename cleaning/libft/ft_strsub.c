@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/30 18:21:25 by regien            #+#    #+#             */
-/*   Updated: 2017/10/06 16:55:13 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/07 15:16:58 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 char*	ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*substr
-	while(s == '\0' || (substr = (char *) malloc(sizeof(char) * len + 1) != '\0')
+	char	*substr;
+	unsigned int	i;
+	
+	i = 0;
+	if(!(s) || !(substr = (char *) malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	while (i < len)
+	{
+		substr[i] = s[start + i];
+		i++;
+	}
+	substr[i] = '\0';
+	return (substr);
 }

@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 02:31:38 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/06 15:59:08 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/07 15:44:03 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,16 @@
 
 char	*ft_strcat(char *dst,const char *src)
 {
-	size_t	i;
-	size_t	len;
+	unsigned int	i;
+	unsigned int	len;
 
 	len = ft_strlen(dst);
 	i = 0;
-	while(src[i] != '\0')
+	while(src[i])
 	{
-		dst[len] = src[i];
-		len++;
+		dst[len + i] = src[i];
 		i++;
 	}
-	dst[len+1] = '\0';
+	dst[len + i] = '\0';
 	return(dst);
 }
-
-
-//temporarily in development
-
-/*
-char	*ft_strcat(char *dst,const char *src)
-{
-	char	*temp;
-	
-	temp = malloc(sizeof(char) * ft_strlen(dst));
-	ft_strcpy(temp, dst);
-	free(*dst);
-	dst = malloc(sizeof(char) * ft_strlen(src) + ft_strlen(dst)
-	
-}
-*/

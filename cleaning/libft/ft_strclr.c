@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 03:46:39 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/09/29 03:54:33 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/07 14:17:13 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_strclr(char *s)
 {
-	size_t	t;
+	int	i;
 
-	t = 0;
-	while(ft_strlen(s) > t)
+	i = 0;
+	if(s)
 	{
-		s[t] = '\0';
-		t++;
+		while(s[1])
+		s[i] = '\0';
+		i++;
 	}
 }
