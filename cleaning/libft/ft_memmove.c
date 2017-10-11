@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 15:55:39 by regien            #+#    #+#             */
-/*   Updated: 2017/10/09 21:32:04 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/10 18:35:38 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	i = 0;
 	if(src < dest)
 	{
 		while (n > 0)
