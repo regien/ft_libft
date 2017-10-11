@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcpyold.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/09 17:11:23 by regien            #+#    #+#             */
-/*   Updated: 2017/10/09 18:34:03 by regien           ###   ########.fr       */
+/*   Created: 2017/09/29 02:08:48 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/09/29 02:08:49 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,29 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t		i;
-	unsigned char	*destc;
-	unsigned char	*srcc;
+	unsigned char	*rushb;
+	unsigned char	*sauce;
+	size_t			b;
 
-	destc = (unsigned char *)dest;
-	srcc = (unsigned char *)src;
-	i = 0;
-	while (i < n)
+	sauce = (unsigned char *)src;
+	rushb = (unsigned char *)dest;
+	b = 0;
+
+	if (sauce < rushb)
 	{
-		destc[i] = srcc[i];
-		i++;
+		while(n > 0)
+		{
+			rushb[n] = sauce[n];
+			n--;
+		}
+	}
+	else
+	{
+		while(b < n)
+		{
+			rushb[b] = sauce[b];
+			b++;
+		}
 	}
 	return (dest);
 }

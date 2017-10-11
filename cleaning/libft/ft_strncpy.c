@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 02:10:10 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/09/29 02:10:13 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/08 20:40:58 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_strncpy(char *dest, char *src, size_t len)
 {
-	size_t i;
-	int b;
-	
+	size_t		i;
+
 	i = 0;
-	b = 0;
-	while ((dest[i] = src[b]) != '\0' && i < len)
+	while (i < len && src[i])
 	{
-		i++;
-		b++;
-	}
-	while ((ft_strlen(src) <= ft_strlen(dest)) && i < len)
-	{
-		dest[i] = src[b];
+		dest[i] = src[i];
 		i++;
 	}
-	return (dest);
+	while (i < len)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return(dest);
 }

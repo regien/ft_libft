@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/08 15:31:16 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/10 15:16:28 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -340,12 +340,37 @@ int main(void)
 	ft_putnbr(ft_strlcat("pendejadas", "pendejadas", 5));
 	ft_putstr("\n");
 
-	// STRLCAT
+	// STRSTR
 	printf("\n\nSTRSTR TEST\n\n");
+	ft_putstr("strstr:\t");
 	ft_putstr(strstr("qewadszcxpendejadas.com", "pen"));
 	ft_putstr("\n");
+	ft_putstr("my own strstr:\t");
+	ft_putstr(strstr("qewadszcxpendejadas.com", "come"));
+	ft_putstr("\n");
+	
+	// STRCMP
+	printf("\n\nSTRCMP TEST\n\n");
+	ft_putstr("my own strcmp =\t");
+	ft_putnbr(ft_strcmp("pastrana", ""));
+	ft_putstr("\n");
+	ft_putstr("strcmp =\t");
+	ft_putnbr(strcmp("pastrana", ""));
+	ft_putstr("\n");
+	
+	printf("\n\nSTRCMP TEST\n\n");
+	ft_putstr("my own strncmp =\t");
+	ft_putnbr(ft_strncmp("pastrana", "pst", 3));
+	ft_putstr("\n");
+	ft_putstr("strncmp =\t");
+	ft_putnbr(strncmp("pastrana", "pst", 3));
+	ft_putstr("\n");
 
-
+	// STRCAT
+	printf("\n\nSTRCAT TEST\n\n");
+	ft_putstr(ft_strcat("pendejadas", "pendejadas"));
+	ft_putstr("\n");
+	
 	// FILL MEE
 
 }
