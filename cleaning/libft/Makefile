@@ -6,7 +6,7 @@
 #    By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/25 16:22:47 by gmalpart          #+#    #+#              #
-#    Updated: 2017/10/09 21:55:40 by regien           ###   ########.fr        #
+#    Updated: 2017/10/12 18:08:55 by regien           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FILES = ft_putchar.c ft_putstr.c ft_strlen.c ft_swap.c ft_strcmp.c ft_putnbr.c \
 	ft_toupper.c ft_isprint.c ft_isdigit.c ft_isascii.c ft_isalpha.c \
 	ft_isalnum.c ft_strdel.c ft_strsub.c ft_strncat.c ft_strchr.c \
 	ft_strlcat.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c \
-	ft_memccpy.c ft_memmove.c 
+	ft_memccpy.c ft_memmove.c ft_strstr.c ft_strnstr.c
 
 OBJECTS = $(wildcard *.o)
 

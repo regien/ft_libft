@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/09 15:55:39 by regien            #+#    #+#             */
-/*   Updated: 2017/10/12 19:07:54 by regien           ###   ########.fr       */
+/*   Created: 2017/10/12 15:00:24 by regien            #+#    #+#             */
+/*   Updated: 2017/10/12 15:37:30 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	a
+	int	i;
+	int	d;
+
+	if (!needle[0])
+		return ((char *)haystack);
+	while (haystack[i])
+	{
+		while (haystack[i + d] == needle[d] && needle[d])
+			d++;
+		if (!needle[d])
+			return ((char *)(haystack + i));
+		d = 0;
+		i++;
+	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/10 15:16:28 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/12 15:38:51 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -346,7 +346,7 @@ int main(void)
 	ft_putstr(strstr("qewadszcxpendejadas.com", "pen"));
 	ft_putstr("\n");
 	ft_putstr("my own strstr:\t");
-	ft_putstr(strstr("qewadszcxpendejadas.com", "come"));
+	ft_putstr(strstr("qewadszcxpendejadas.com", "pen"));
 	ft_putstr("\n");
 	
 	// STRCMP
@@ -368,7 +368,7 @@ int main(void)
 
 	// STRCAT
 	printf("\n\nSTRCAT TEST\n\n");
-	ft_putstr(ft_strcat("pendejadas", "pendejadas"));
+//	ft_putstr(ft_strcat("pendejadas", "pendejadas"));
 	ft_putstr("\n");
 	
 	// FILL MEE
