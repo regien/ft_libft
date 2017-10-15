@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/12 15:38:51 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/13 20:22:46 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -371,6 +371,10 @@ int main(void)
 //	ft_putstr(ft_strcat("pendejadas", "pendejadas"));
 	ft_putstr("\n");
 	
+	// ITOA BASE
+	printf("\n\nITOABASE TEST\n\n");
+	
+
 	// FILL MEE
 
 }
