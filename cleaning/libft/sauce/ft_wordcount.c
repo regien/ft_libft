@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrevert.c                                     :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/01 15:35:59 by regien            #+#    #+#             */
-/*   Updated: 2017/10/14 23:39:33 by regien           ###   ########.fr       */
+/*   Created: 2017/10/16 01:42:46 by regien            #+#    #+#             */
+/*   Updated: 2017/10/16 01:48:02 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-*	Revert every character in the string;
+**	counts the words in a string, using a char as a separator.
 */
 
-char	*ft_strrevert(char *s1)
+size_t		ft_wordcount(const char *str, char n)
 {
-	char	*mom;
-	int	len;
 	int	i;
+	size_t	words;
 
 	i = 0;
-	len = ft_strlen(s1) - 1;
-	if(!(mom = malloc((sizeof(char) * ft_strlen(s1)) +1)))
-		return (0);
-	ft_strcpy(mom, s1);
-	while(len > 0)
+	words = 0;
+	while (str[i])
 	{
-		mom[i] = s1[len];
+		if (str[i] != n)
+			w++;
+		while (str[i] != n && str[i + 1])
+			i++;
 		i++;
-		len--;
 	}
-	return (mom);
+	return (words);
 }

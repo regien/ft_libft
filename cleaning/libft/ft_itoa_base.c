@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoabase.c                                      :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/13 20:23:03 by regien            #+#    #+#             */
-/*   Updated: 2017/10/13 21:04:23 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/16 00:14:52 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*dtwork(int n, int len, char *pdj, size_t negative)
+char	*dtworkbase(int n, int len, char *pdj, size_t negative, int base)
 {
+	char	*base_string;
+
+	base_string = "0123456789ABCDEF";
 	while (len >= 0)
 	{
 		if (len >= 0)
 		{
-			pdj[len] = ((n % 10) + '0');
-			n = (n / 10);
+			pdj[len] = base_string[n % base];
+			n = (n / base);
 			len--;
 		}
-		if (negative == 1 && len == 0)
+		if (negative == 1 && len == 0 && base == 10)
 		{
 			pdj[len] = '-';
 			len--;
@@ -31,28 +34,41 @@ char	*dtwork(int n, int len, char *pdj, size_t negative)
 	return(pdj);
 }
 
-char	*ft_itoa(int n, int base)
+char	*ft_itoa_base(int n, int base)
 {
+	long	nbr;
 	size_t	negative;
 	int	len;
 	char	*holder;
-
-	len = ft_nbrlen(n, 10);
+// N is unsigned as long as if not base 10
+	if (n == 0 || base < 2 || base > 16)
+		return (ft_strdup("0"));
+// Base string
+//	base_string = "0123456789ABC"
+// change 10 - to base variable
+	nbr = n;
+	len = ft_nbrlen(n, base);
 	if (!(holder = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	holder[len] = '\0';
 	len--;
 	negative = 0;
-	if (n == -2147483648)
+//	if (n == -2147483648 && base == 10)
+//	{
+//		ft_strcpy(holder, "-2147483648");
+//		return(holder);
+//	}
+	if (nbr < 0)
 	{
-		ft_strcpy(holder, "-2147483648");
-		return(holder);
+		nbr = -nbr;
+		if (base == 10)
+			negative = 1;
 	}
-	if (n < 0)
-	{
-		negative = 1;
-		n = -n;
-	}
-	holder = dtwork(n, len, holder, negative);
+//	if (n < 0 && base == 10)
+//	{
+//		negative = 1;
+//		n = -n;
+//	}
+	holder = dtworkbase(nbr, len, holder, negative, base);
 	return (holder);
 }

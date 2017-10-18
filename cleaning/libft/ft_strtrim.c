@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 18:51:57 by regien            #+#    #+#             */
-/*   Updated: 2017/10/02 21:57:49 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/16 00:37:22 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ char	*ft_strtrim(char const *s)
 	{
 		char	*tempstr;
 		
-		tempstr = malloc((sizeof(char) * (y - x)) + 1);
+		if (!(tempstr = malloc((sizeof(char) * (y - x)) + 1)))
+			return (0);
 		while(x <= y)
 		{
 			tempstr[cont] = s[x];

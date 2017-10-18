@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrevert.c                                     :+:      :+:    :+:   */
+/*   ft_wordlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/01 15:35:59 by regien            #+#    #+#             */
-/*   Updated: 2017/10/14 23:39:33 by regien           ###   ########.fr       */
+/*   Created: 2017/10/16 01:56:27 by regien            #+#    #+#             */
+/*   Updated: 2017/10/16 02:22:24 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-*	Revert every character in the string;
-*/
-
-char	*ft_strrevert(char *s1)
+size_t		ft_wordlen(const char *str, int n)
 {
-	char	*mom;
-	int	len;
-	int	i;
+	int		i;
+	size_t		len;
 
 	i = 0;
-	len = ft_strlen(s1) - 1;
-	if(!(mom = malloc((sizeof(char) * ft_strlen(s1)) +1)))
-		return (0);
-	ft_strcpy(mom, s1);
-	while(len > 0)
-	{
-		mom[i] = s1[len];
+	len = 0;
+	while (str[i] == n)
 		i++;
-		len--;
+	while (str[i] != n && str[i])
+	{
+		i++;
+		len++;
 	}
-	return (mom);
+	return (len);
 }

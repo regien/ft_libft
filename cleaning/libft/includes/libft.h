@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/13 18:45:48 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/15 21:23:58 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ char	*ft_strnstr(const char *big, const char *litle, size_t len);
 // mostly exam functions
 char	*ft_strrevert(char *s1);
 size_t	ft_nbrlen(int nbr, int base);
+char	*ft_itoa_base(int n, int base);
 
 // linked list part
 // delete me when you done

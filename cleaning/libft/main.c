@@ -6,12 +6,11 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/13 20:22:46 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/16 00:30:23 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static int		ft_word_countc(const char *str, char c)
 {
@@ -300,8 +299,8 @@ int main(void)
 	// NRBLEN
 	// incompleto ?
 	printf("\n\nNBRLEN TEST\n\n");
-//	ft_putstr("");
-//	ft_putstr(ft_nbrlen());
+	//	ft_putstr("");
+	//	ft_putstr(ft_nbrlen());
 
 
 	// ITOA
@@ -333,10 +332,10 @@ int main(void)
 
 	// STRLCAT
 	printf("\n\nSTRLCAT TEST\n\n");
-//	dunno why this function is not even in the real library
-//	try to cast this in a mac ^ & install hackintosh
-//	ft_putnbr(strlcat("pendejadas", "pendejadas", 5));
-//	ft_putstr("\n");
+	//	dunno why this function is not even in the real library
+	//	try to cast this in a mac ^ & install hackintosh
+	//	ft_putnbr(strlcat("pendejadas", "pendejadas", 5));
+	//	ft_putstr("\n");
 	ft_putnbr(ft_strlcat("pendejadas", "pendejadas", 5));
 	ft_putstr("\n");
 
@@ -348,7 +347,7 @@ int main(void)
 	ft_putstr("my own strstr:\t");
 	ft_putstr(strstr("qewadszcxpendejadas.com", "pen"));
 	ft_putstr("\n");
-	
+
 	// STRCMP
 	printf("\n\nSTRCMP TEST\n\n");
 	ft_putstr("my own strcmp =\t");
@@ -357,7 +356,7 @@ int main(void)
 	ft_putstr("strcmp =\t");
 	ft_putnbr(strcmp("pastrana", ""));
 	ft_putstr("\n");
-	
+
 	printf("\n\nSTRCMP TEST\n\n");
 	ft_putstr("my own strncmp =\t");
 	ft_putnbr(ft_strncmp("pastrana", "pst", 3));
@@ -368,12 +367,50 @@ int main(void)
 
 	// STRCAT
 	printf("\n\nSTRCAT TEST\n\n");
-//	ft_putstr(ft_strcat("pendejadas", "pendejadas"));
+	//	ft_putstr(ft_strcat("pendejadas", "pendejadas"));
 	ft_putstr("\n");
-	
+
 	// ITOA BASE
 	printf("\n\nITOABASE TEST\n\n");
-	
+	ft_putstr("JALEMAN VERSION:\n");
+/*	ft_putstr(ft_jaleitoa_base(4585, 8));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(-4585, 9));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(4585, 10));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(4585, 11));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(-4585, 12));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(4585, 13));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(4585, 14));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(4585, 15));
+	ft_putchar('\n');
+	ft_putstr(ft_jaleitoa_base(-4568, 12));
+*/	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_putstr("MY VERSION:\n");
+	ft_putstr(ft_itoa_base(4585, 8));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(-4585, 9));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(4585, 10));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(4585, 11));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(-4585, 12));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(4585, 13));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(4585, 14));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(4585, 15));
+	ft_putchar('\n');
+	ft_putstr(ft_itoa_base(-4568, 12));
+	ft_putchar('\n');
 
 	// FILL MEE
 
