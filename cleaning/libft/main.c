@@ -6,12 +6,20 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/16 00:30:23 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/19 15:47:23 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//STRTRIM jaleman
+//my shit has an stupid bug that fail in one test case
+
+
+
+
+
+//strsplit 
 static int		ft_word_countc(const char *str, char c)
 {
 	int word_count;
@@ -281,7 +289,6 @@ int main(void)
 	ft_putstr("testing ft_strtrim: \t|");
 	//	ft_putstr(ft_strtrim("                      "));
 	ft_putstr("|\n");
-	ft_putstr("if none appears your shit is wrong motherfucker\n");
 
 	// STRSPLIT
 	printf("\n\nSTRSPLIT\n\n");
@@ -372,25 +379,7 @@ int main(void)
 
 	// ITOA BASE
 	printf("\n\nITOABASE TEST\n\n");
-	ft_putstr("JALEMAN VERSION:\n");
-/*	ft_putstr(ft_jaleitoa_base(4585, 8));
 	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(-4585, 9));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(4585, 10));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(4585, 11));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(-4585, 12));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(4585, 13));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(4585, 14));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(4585, 15));
-	ft_putchar('\n');
-	ft_putstr(ft_jaleitoa_base(-4568, 12));
-*/	ft_putchar('\n');
 	ft_putchar('\n');
 	ft_putstr("MY VERSION:\n");
 	ft_putstr(ft_itoa_base(4585, 8));
