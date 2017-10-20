@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 02:12:03 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/09/29 02:16:30 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/20 01:24:47 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_memdel(void **ap)
 {
-	if (*ap || ap)
-		return (0);
-	free(*ap);
-	*ap = NULL;
+	if (ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 	return (0);
 }

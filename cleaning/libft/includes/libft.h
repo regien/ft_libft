@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/15 21:23:58 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/20 04:41:49 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 char	*ft_strstr(const char *haystack, const char *needle);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strnstr(const char *big, const char *litle, size_t len);
+void	ft_striter(char *s, void (*f)(char *));
 
 
 // extra functions

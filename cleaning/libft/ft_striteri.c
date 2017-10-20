@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/29 03:46:39 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/20 02:39:43 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/10/20 04:47:17 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/10/20 06:29:44 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_striteri(char s, void (*f)(unsigned int, char *))
 {
-	int	i;
-
-	i = 0;
-	if(s)
-	{
-		while(s[i])
-		s[i++] = '\0';
-	}
+	
 }

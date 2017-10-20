@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 16:03:44 by regien            #+#    #+#             */
-/*   Updated: 2017/10/19 15:47:23 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/20 01:31:33 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -284,7 +284,7 @@ int main(void)
 	ft_putstr(ft_strtrim("   hold on bitch    "));
 	ft_putstr("|\n");
 	ft_putstr("testing ft_strtrim: \t|");
-	ft_putstr(ft_strtrim("             h             "));
+	ft_putstr(ft_strtrim("                          "));
 	ft_putstr("|\n");
 	ft_putstr("testing ft_strtrim: \t|");
 	//	ft_putstr(ft_strtrim("                      "));

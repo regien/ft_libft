@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/13 04:07:38 by regien            #+#    #+#             */
-/*   Updated: 2017/10/13 19:31:11 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/20 04:28:24 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 
 	if (!(new = (t_list *)malloc(sizeof(t_list) * content_size)))
 		return (NULL);
-	if (content)
+	if (!content)
 	{
 		new->content = NULL;
 		new->content_size = 0;

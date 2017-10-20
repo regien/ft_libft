@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/12 15:00:24 by regien            #+#    #+#             */
-/*   Updated: 2017/10/12 15:37:30 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/20 01:24:32 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int	i;
 	int	d;
 
+	i = 0;
+	d = 0;
 	if (!needle[0])
 		return ((char *)haystack);
 	while (haystack[i])

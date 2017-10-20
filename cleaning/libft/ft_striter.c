@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/29 03:46:39 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/20 02:39:43 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/10/20 04:31:09 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/10/20 04:43:46 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	if(s)
+	if (s)
 	{
 		while(s[i])
-		s[i++] = '\0';
+		{
+			f(&(s[i]));
+			i++;
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 18:51:57 by regien            #+#    #+#             */
-/*   Updated: 2017/10/19 15:44:17 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/20 01:58:06 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,12 @@ char	*ft_strtrim(char const *s)
 	size_t	y;
 	size_t	cont;
 
+	if (!s)
+		return (NULL);
 	cont = 0;
 	x = get_x(s);
 	y = get_y(s);
-	if (x != 0 || y != 0)
+	if (x != ft_strlen(s) || y != 0)
 	{
 		char	*tempstr;
 		

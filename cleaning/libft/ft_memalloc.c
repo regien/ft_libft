@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/29 02:06:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/12 01:30:28 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/20 00:54:33 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	*ft_memalloc(size_t size)
 	opt = NULL;
 	if (size)
 	{
-		if(!(opt=malloc(sizeof(unsigned char) * size)))
+		if(!(opt = malloc(sizeof(unsigned char) * size)))
 			return (NULL);
 		while (size)
 		{
-			opt[size] = 0;
-			size--;
+			opt[--size] = 0;
 		}
 	}
 	return ((void*)opt);
