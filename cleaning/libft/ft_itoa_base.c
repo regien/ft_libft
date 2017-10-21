@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/13 20:23:03 by regien            #+#    #+#             */
-/*   Updated: 2017/10/16 00:14:52 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/21 02:32:38 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,8 @@ char	*ft_itoa_base(int n, int base)
 	holder[len] = '\0';
 	len--;
 	negative = 0;
-//	if (n == -2147483648 && base == 10)
-//	{
-//		ft_strcpy(holder, "-2147483648");
-//		return(holder);
-//	}
+	if (n == -2147483648 && base == 10)
+		return(ft_strcpy(holder, "-2147483648"));
 	if (nbr < 0)
 	{
 		nbr = -nbr;

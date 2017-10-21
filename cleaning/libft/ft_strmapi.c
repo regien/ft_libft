@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/20 20:48:56 by regien            #+#    #+#             */
-/*   Updated: 2017/10/20 21:30:35 by regien           ###   ########.fr       */
+/*   Created: 2017/10/20 20:32:21 by regien            #+#    #+#             */
+/*   Updated: 2017/10/20 20:48:20 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	t_list	*top;
-	t_list	*iteri;
-
-	if (!lst)
+	size_t	len;
+	int	i;
+	char	*holder;
+	
+	if (!s)
 		return (NULL);
-	if (!(iteri = ft_lstnew(NULL, 0)))
+	i = 0;
+	len = ft_strlen(s);
+	if(!(holder = (char *)malloc(sizeof(*s) * (len + 1))))
 		return (NULL);
-	iteri = f(lst);
-	top = iteri;
-	while (lst -> next)
+	while (holder[i])
 	{
-		lst = lst->next;
-		iteri->next = f(lst);
-		iteri = iteri->next;
+		holder[i] = f(i, s[i]);
+		i++;
 	}
-	return (top);
+	holder[i] = '\0';
+	return (holder);
 }

@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/20 04:41:49 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/21 01:22:08 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,11 @@ char	*ft_strstr(const char *haystack, const char *needle);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strnstr(const char *big, const char *litle, size_t len);
 void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 // extra functions
 // mostly exam functions
 char	*ft_strrevert(char *s1);
@@ -91,5 +94,6 @@ void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
