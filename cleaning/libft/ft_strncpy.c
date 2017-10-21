@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/29 02:10:10 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/08 20:40:58 by regien           ###   ########.fr       */
+/*   Created: 2017/10/21 06:21:18 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/10/21 06:21:35 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strncpy(char *dest, char *src, size_t len)
 		dest[i] = '\0';
 		i++;
 	}
-	return(dest);
+	return (dest);
 }

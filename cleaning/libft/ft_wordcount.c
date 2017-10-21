@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/05 13:33:45 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/21 06:19:12 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/10/16 01:42:46 by regien            #+#    #+#             */
+/*   Updated: 2017/10/21 06:21:58 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+/*
+**	counts the words in a string, using a char as a separator.
+*/
+
+size_t		ft_wordcount(const char *str, char n)
 {
-	int	i;
+	int		i;
+	size_t	words;
 
 	i = 0;
-	if (str)
+	words = 0;
+	while (str[i])
 	{
-		while (str[i] != '\0')
-		{
-			ft_putchar(str[i]);
+		if (str[i] != n)
+			words++;
+		while (str[i] != n && str[i + 1])
 			i++;
-		}
+		i++;
 	}
+	return (words);
 }

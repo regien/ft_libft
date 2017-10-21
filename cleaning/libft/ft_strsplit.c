@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wordcount.c                                     :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/16 01:42:46 by regien            #+#    #+#             */
-/*   Updated: 2017/10/16 01:48:02 by regien           ###   ########.fr       */
+/*   Created: 2017/10/02 21:06:57 by regien            #+#    #+#             */
+/*   Updated: 2017/10/21 06:24:23 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-**	counts the words in a string, using a char as a separator.
-*/
-
-size_t		ft_wordcount(const char *str, char n)
+char	**ft_strsplit(char const *s, char c)
 {
-	int	i;
-	size_t	words;
+	size_t		i;
+	size_t		d;
+	size_t		f;
+	char		**hol;
 
 	i = 0;
-	words = 0;
-	while (str[i])
+	d = 0;
+	if (!(hol = malloc(sizeof(char*) * (ft_wordcount(s, c) + 1))) || !s)
+		return (NULL);
+	while (i < ft_wordcount(s, c))
 	{
-		if (str[i] != n)
-			w++;
-		while (str[i] != n && str[i + 1])
-			i++;
+		if (!(hol[i] = malloc(sizeof(char) * (ft_wordlen(s + d, c) + 1))))
+			return (NULL);
+		f = 0;
+		while (s[d] == c)
+			d++;
+		while (s[d] != c && s[d])
+			hol[i][f++] = s[d++];
+		hol[i][f] = '\0';
 		i++;
 	}
-	return (words);
+	hol[i] = NULL;
+	return (hol);
 }

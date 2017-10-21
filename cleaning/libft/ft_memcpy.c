@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:11:23 by regien            #+#    #+#             */
-/*   Updated: 2017/10/09 18:34:03 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/21 06:18:55 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*destc;
 	unsigned char	*srcc;
 

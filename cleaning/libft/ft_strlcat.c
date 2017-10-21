@@ -6,7 +6,7 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/07 18:56:57 by regien            #+#    #+#             */
-/*   Updated: 2017/10/12 02:03:47 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/21 06:20:48 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	len = 0;
-	while(dst[len] && (len < size))
+	while (dst[len] && (len < size))
 		len++;
 	i = len;
 	while (src[len - i] && len + 1 < size)

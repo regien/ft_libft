@@ -6,7 +6,7 @@
 /*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 13:33:53 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/08 18:11:37 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/21 06:19:42 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_strcmp(const char *s1,const char *s2)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;
-	int		i;
+	int				i;
 
 	i = 0;
 	str1 = (unsigned char*)s1;

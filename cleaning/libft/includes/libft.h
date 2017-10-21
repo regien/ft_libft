@@ -6,7 +6,7 @@
 /*   By: regien <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 19:34:42 by regien            #+#    #+#             */
-/*   Updated: 2017/10/21 01:22:08 by regien           ###   ########.fr       */
+/*   Updated: 2017/10/21 05:47:51 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,37 +56,40 @@ void	ft_strdel(char **as);
 char*	ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 char	*ft_strchr(const char *s, int c);
-size_t		ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strrchr(const char *s, int c);
-int	ft_strncmp(const char * s1, const char *s2, size_t n);
+int		ft_strncmp(const char * s1, const char *s2, size_t n);
 
 
 void	*ft_memchr(const void *s, int c, size_t n);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 char	*ft_strstr(const char *haystack, const char *needle);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strnstr(const char *big, const char *litle, size_t len);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-
-
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char	**ft_strsplit(char const *s, char c);
+
 // extra functions
 // mostly exam functions
 char	*ft_strrevert(char *s1);
 size_t	ft_nbrlen(int nbr, int base);
 char	*ft_itoa_base(int n, int base);
+size_t	ft_wordcount(const char *str, char n);
+size_t	ft_wordlen(const char *str, int n);
 
 // linked list part
 // delete me when you done
 typedef struct	s_list
 {
-	void		*content;
-	size_t		content_size;
+	void			*content;
+	size_t			content_size;
 	struct	s_list	*next;
-}		t_list;
+}				t_list;
 // todas las funciones de linked list deben ir debajo
 
 t_list	*ft_lstnew(void const *content, size_t content_size0);
@@ -94,6 +97,6 @@ void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmalpart <gmalpart@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/05 13:33:45 by gmalpart          #+#    #+#             */
-/*   Updated: 2017/10/21 06:19:12 by gmalpart         ###   ########.fr       */
+/*   Created: 2017/10/21 03:18:27 by gmalpart          #+#    #+#             */
+/*   Updated: 2017/10/21 03:48:13 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char			*holder;
 
-	i = 0;
-	if (str)
-	{
-		while (str[i] != '\0')
-		{
-			ft_putchar(str[i]);
-			i++;
-		}
-	}
+	if (!s1 || !s2)
+		return (NULL);
+	holder = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!holder)
+		return (NULL);
+	ft_strcpy(holder, s1);
+	return (ft_strcat(holder, s2));
 }

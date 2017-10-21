@@ -6,12 +6,12 @@
 /*   By: regien <gmalpart@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 15:35:00 by regien            #+#    #+#             */
-/*   Updated: 2017/10/07 02:04:59 by gmalpart         ###   ########.fr       */
+/*   Updated: 2017/10/21 07:57:39 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 char	*dtwork(int n, int len, char *pdj, size_t negative)
 {
 	while (len >= 0)
@@ -55,4 +55,10 @@ char	*ft_itoa(int n)
 	}
 	holder = dtwork(n, len, holder, negative);
 	return (holder);
+}
+*/
+
+char	*ft_itoa(int n)
+{
+	return (ft_itoa_base(n, 10));
 }
